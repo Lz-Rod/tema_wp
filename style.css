@@ -1,0 +1,140 @@
+/*
+Theme Name: tema wp
+Description: tema wordpress com filtragem de categoria
+Version: 1.0
+Author: Luiz Rodrigues
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #004e9a;
+}
+
+/* Estrutura de layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.post:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.entry-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.entry-meta {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.entry-content {
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0073e6;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #004e9a;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    .entry-title {
+        font-size: 20px;
+    }
+}
